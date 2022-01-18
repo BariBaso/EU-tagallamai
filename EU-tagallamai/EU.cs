@@ -18,8 +18,11 @@ namespace EU_tagallamai
             }
 
             //3.
-            Console.WriteLine($"EU tagállamainak száma: {tagok.Count}");
-
+            Console.WriteLine($"3. feladat: EU tagállamainak száma: {tagok.Count} db");
+            //4.
+            Console.WriteLine($"4. feladat: 2007-ben {tagok.Where(x => x.dátum.Year == 2007).Count()} ország csatlakozott");
+            //5.
+            Console.WriteLine($"5. feladat: magyarország csatlakozásának dátuma: {tagok.Find(x => x.név == "Magyarország").dátum:d}");
         }
     }
 }
