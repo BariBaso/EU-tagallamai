@@ -23,6 +23,8 @@ namespace EU_tagallamai
             Console.WriteLine($"4. feladat: 2007-ben {tagok.Where(x => x.dátum.Year == 2007).Count()} ország csatlakozott");
             //5.
             Console.WriteLine($"5. feladat: magyarország csatlakozásának dátuma: {tagok.Find(x => x.név == "Magyarország").dátum:d}");
+            //6.
+            Console.WriteLine($"6. feladat: Májusban {(tagok.Any(x => x.dátum.Month == 05) ? "vonlt": "Nem volt")} csatlakozás!");
         }
     }
 }
