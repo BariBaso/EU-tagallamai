@@ -25,6 +25,27 @@ namespace EU_tagallamai
             Console.WriteLine($"5. feladat: magyarország csatlakozásának dátuma: {tagok.Find(x => x.név == "Magyarország").dátum:d}");
             //6.
             Console.WriteLine($"6. feladat: Májusban {(tagok.Any(x => x.dátum.Month == 05) ? "vonlt": "Nem volt")} csatlakozás!");
+            //7.
+            Console.WriteLine($"7. feladat: Legutoljáta csatlakozott ország: {tagok.OrderBy(x => x.dátum).Last().név}");
+            //8.
+            Dictionary<int, int> statisztika = new Dictionary<int, int>();
+
+            foreach (var s in tagok)
+            {
+                if (statisztika.ContainsKey(s.dátum.Year))
+                {
+                    statisztika[s.dátum.Year]++;
+                }
+                else
+                {
+                    statisztika.Add(s.dátum.Year, 1);
+                }
+            }
+            Console.WriteLine("8. feladat: statisztika");
+            foreach (var a in statisztika)
+            {
+                Console.WriteLine($"\t{a.Key} - {a.Value} ország");
+            }
         }
     }
 }
