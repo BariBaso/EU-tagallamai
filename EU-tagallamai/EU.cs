@@ -46,7 +46,6 @@ namespace EU_tagallamai
             {
                 Console.WriteLine($"\t{a.Key} - {a.Value} ország");
             }
-
         }
     }
 }
